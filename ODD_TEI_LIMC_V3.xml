@@ -1,22 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-
-
 <!DOCTYPE TEI [
-     
-     <!ENTITY LIMC '<choice><expan xml:lang="la">Lexicon Iconographicon Mythologiae Classicae </expan><abbr xml:lang="la">LIMC</abbr></choice>' > <!-- Entité pour le LIMC -->
-     
-     <!ENTITY KLY "<ref target ='cly'>Klytaimestra </ref>" >
-     
-     <!ENTITY LAO "<ref target ='lao'>Laois</ref>" >
-     
+  <!ENTITY LIMC '<choice><expan xml:lang="la">Lexicon Iconographicon Mythologiae Classicae </expan><abbr xml:lang="la">LIMC</abbr></choice>' > <!-- Entité pour le LIMC -->
+  <!ENTITY KLY "<ref target ='cly'>Klytaimestra </ref>" >
+  <!ENTITY LAO "<ref target ='lao'>Laois</ref>" >
 ]>
 
 
-<!-- REPRENDRE LE TEI HEADER EN SUPPRIMANT LES ÉLEMENTS RÉPÉTITIFS ET INUTILES PAR RAPPORT AU HEADER 'de base' 
--->
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:s="http://purl.oclc.org/dsdl/schematron"
-   xml:lang="en">
+<!-- REPRENDRE LE TEI HEADER EN SUPPRIMANT LES ÉLEMENTS RÉPÉTITIFS ET INUTILES PAR RAPPORT AU HEADER 'de base'-->
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:s="http://purl.oclc.org/dsdl/schematron" xml:lang="en">
 
    <teiHeader>
       <fileDesc>
@@ -25,8 +17,8 @@
             <title> Documentation de l'encodage du &LIMC; en TEI par Maxime GRIVEAU</title>
          </titleStmt>
          <editionStmt>
-            <edition>L'édition sur laquelle est basée l'encodage est la première et unique édition
-               du &LIMC;(volume VI, des Kentaurides à Oiax)</edition>
+            <edition>L'édition sur laquelle est basé l'encodage est la première et unique édition
+               du &LIMC; (volume VI, des Kentaurides à Oiax)</edition>
          </editionStmt>
 
          <publicationStmt>
@@ -58,7 +50,7 @@
 
                <monogr>
                   <author>Fondation pour le &LIMC;</author>
-                  <title>&LIMC; volume VI : Kentauroi et Kentaurides - Oiax </title>
+                  <title>&LIMC; volume VI : Kentauroi et Kentaurides - Oiax</title>
 
                   <imprint>
                      <pubPlace>Zürich</pubPlace>
@@ -70,17 +62,13 @@
                   </imprint>
                </monogr>
 
-
-
                <citedRange from="72" to="81" unit="pp"/>
                <citedRange from="185" to="187" unit="pp"/>
 
             </biblStruct>
          </sourceDesc>
 
-
       </fileDesc>
-
 
       <!-- Historique des modifications -->
       <revisionDesc>
@@ -101,12 +89,12 @@
             <head>Projet éditorial et exploitations possibles</head>
 
             <p>L'objectif de notre encodage est de proposer un encodage-type de deux notices issues
-               du &LIMC; ainsi que de contraintre l'utilisation des balises choisies afin, dans le
+               du &LIMC; ainsi que de constraint l'utilisation des balises choisies afin, dans le
                futur, de prévoir un encodage de tous les volumes de l'encyclopédie (collaboratif ou
-               automatisé). On a taché de contraindre l'utilisation des balises le plus précisément
+               automatisé). On a tâché de contraindre l'utilisation des balises le plus précisément
                possible afin, si le projet se concrétise, d'avoir un encodage le plus régulier et
-               correct. À terme, une mise en ligne du &LIMC; ainsi encodé, pourra être mise en ligne
-               ; l'objectif final étant de rendre le plus accessible possible son contenu : non
+               correct. À terme, une mise en ligne du &LIMC; ainsi encodé, pourra être mise en ligne ;
+               l'objectif final étant de rendre le plus accessible possible son contenu : non
                seulement en le rendant simplement consultable mais aussi par une traduction du LIMC
                dans les 4 langues qui le composent (actuellement, chacune des notices est composée
                dans la langue de l'auteur ; ce qui rend difficile sa lecture). Ce sera aussi
@@ -118,16 +106,17 @@
 
             <div2>
                <head>Balises, attributs utilisés et contraintes appliquées</head>
-               <p>Nous avons principallement utilisé les balises du chapitre <ref
-                     target="https://tei-c.org/release/doc/tei-p5-doc/en/html/DI.html">9 des
-                     guidelines</ref> concernant les dictionnaires et encyclopédies et avons décidé
+               <p>Nous avons principalement utilisé les balises du chapitre
+                  <ref target="https://tei-c.org/release/doc/tei-p5-doc/en/html/DI.html">9 des
+                  guidelines</ref> concernant les dictionnaires et encyclopédies et avons décidé
                   de structurer notre encodage en suivant le principe qu'une entrée de dictionnaire
                   correspondait à un personnage, nous avons ensuite structuré nos notices en
                   diverses sous parties (sous notices avec la balise<gi corresp="re"> re</gi>)
                   auxquelles nous avons attribué à chaque fois un attribut <att>type</att> qui est
                   contenu dans une liste contrainte (qui reprend la liste des parties de notices du
-                  LIMC) grace à Schematron, pour les <gi corresp="re">re</gi> de premier niveau. Les <gi corresp="re"
-                     >re</gi> de second niveau ne sont, eux, pas contraints. </p>
+                  LIMC) grace à Schematron, pour les <gi corresp="re">re</gi> de premier niveau. Les
+                  <gi corresp="re">re</gi> de second niveau ne sont, eux, pas contraints.
+               </p>
                <p>Voici un exemple </p>
 
                <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -154,15 +143,15 @@
                   et les créations de nouvelles id.</p>
 
                <p> Enfin, concernant les oeuvres d'art, nous avons utilisé les balises suivantes :
-                     <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                  <egXML xmlns="http://www.tei-c.org/ns/Examples">
                      <figure n="1">
                         <!-- numérotation continue de nos figures -->
-                        <graphic
-                           url="https://www.beazley.ox.ac.uk/record/2FEDFC29-F5D2-4D32-BEFB-339311E85E5E"
-                           xml:id="cly_1"/>
+                        <graphic url="https://www.beazley.ox.ac.uk/record/2FEDFC29-F5D2-4D32-BEFB-339311E85E5E"
+                                xml:id="cly_1"/>
                         <ab type="caption">Légende prise sur Beazley Archive</ab>
                      </figure>
-                  </egXML> Nous avons ici fait le choix de ne pas reprendre les légendes fournies
+                  </egXML>
+                  Nous avons ici fait le choix de ne pas reprendre les légendes fournies
                   dans le &LIMC; mais plutôt de réutiliser les excellentes notices de la base de
                   donnée de la céramique attique et italiote en ligne Beazley Archive. Les vases
                   (Grecs ou italiotes) correspondent à 90 % des objets du LIMC. Pour les autres
@@ -182,24 +171,14 @@
 
                <p>Ajoutons enfin que nous avons commenté notre encodage le plus possible</p>
 
-
-
             </div2>
-
-
-
-
          </div1>
 
-
-
          <div1>
-
 
             <head>Règles de validation</head>
             <schemaSpec ident="oddbyexample" start="TEI ">
                <moduleRef key="tei"/>
-
 
                <!--Checking module namesdates-->
                <classRef key="model.persNamePart"/>
@@ -215,7 +194,7 @@
                <elementSpec ident="persName" mode="change">
                   <gloss xml:id="persname"> liste des personnages </gloss>
                   <desc> Liste des personnages, cet élément contiendra obligatoirement un attribut
-                        <att>role</att> dont la valeur est définie dans une liste fermée. Il pourra
+                     <att>role</att> dont la valeur est définie dans une liste fermée. Il pourra
                      aussi contenir une référence (via <att>xml:id</att> ou la <att>ref</att>
                      correspondante) à un autre personnage. Si il est fait mention d'une personne
                      réelle, l'élément <gi corresp="name">name</gi> sera préféré. </desc>
@@ -297,8 +276,8 @@
                      <constraint>
                         <s:rule context="tei:re[not(parent::tei:re)]">
                            <s:assert
-                              test="(@type = 'commentaire' or @type = 'bibliographie' or @type = 'catalogue' or @type = 'etymologie' or @type = 'genealogie' or @type='sources_littéraires')"
-                              >La valeur des éléments re de premier niveau doit être contenue dans
+                                   test="(@type = 'commentaire' or @type = 'bibliographie' or @type = 'catalogue' or @type = 'etymologie' or @type = 'genealogie' or @type='sources_littéraires')"
+                           >La valeur des éléments re de premier niveau doit être contenue dans
                               la liste définie : commentaire | bibliographie | catalogue | etymologie
                               genealogie | sources_littéraires.</s:assert>
                         </s:rule>
@@ -307,10 +286,8 @@
 
                </elementSpec>
 
-
                <!--Checking module core-->
-               <moduleRef key="core"
-                  include="p quote cit term choice reg orig name address addrLine date abbr expan ptr  head note graphic analytic monogr author editor respStmt resp title imprint publisher biblScope citedRange pubPlace bibl biblStruct listBibl ref"/>
+               <moduleRef key="core" include="p quote cit term choice reg orig name address addrLine date abbr expan ptr  head note graphic analytic monogr author editor respStmt resp title imprint publisher biblScope citedRange pubPlace bibl biblStruct listBibl ref"/>
                <elementSpec ident="quote" mode="change">
                   <attList>
                      <attDef ident="type" mode="delete"/>
@@ -474,8 +451,7 @@
                   </attList>
                </elementSpec>
                <!--Checking module header-->
-               <moduleRef key="header"
-                  include="teiHeader fileDesc titleStmt sponsor principal editionStmt edition publicationStmt distributor idno availability seriesStmt notesStmt sourceDesc encodingDesc projectDesc samplingDecl editorialDecl correction normalization quotation hyphenation interpretation classDecl taxonomy profileDesc langUsage language textClass keywords classCode revisionDesc change"/>
+               <moduleRef key="header" include="teiHeader fileDesc titleStmt sponsor principal editionStmt edition publicationStmt distributor idno availability seriesStmt notesStmt sourceDesc encodingDesc projectDesc samplingDecl editorialDecl correction normalization quotation hyphenation interpretation classDecl taxonomy profileDesc langUsage language textClass keywords classCode revisionDesc change"/>
                <elementSpec ident="sponsor" mode="change">
                   <attList>
                      <attDef ident="calendar" mode="delete"/>

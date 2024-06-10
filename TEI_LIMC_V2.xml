@@ -1,44 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="./out/ODD_TEI_LIMC_V3.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?> <!-- ici on met le lien vers le fichier RNG généré en sortie du fichier ODD-->
-<?xml-model href="./out/ODD_TEI_LIMC_V3.rng" type="application/xml" 
-	schematypens="http://purl.oclc.org/dsdl/schematron"?> <!-- ici aussi -->
-
+<?xml-model href="./out/ODD_TEI_LIMC_V3.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?> <!-- ici aussi -->
 
 <!-- Début DTD -->
 
 <!-- L'idéal sera de créer, sur le modèle de celui de Clytemnestre (cly) et de Laois (lao) des entités pour chaque personnage du LIMC afin de faciliter les renvois (qui sont très nombreux) -->
 
 <!DOCTYPE TEI [
-     
-     <!ENTITY LIMC '<choice><expan xml:lang="la">Lexicon Iconographicon Mythologiae Classicae </expan><abbr xml:lang="la">LIMC</abbr></choice>' > <!-- Entité pour le LIMC -->
-     
-     <!ENTITY KLY "<ref target ='cly'>Klytaimestra </ref>" >
-     
-     <!ENTITY LAO "<ref target ='lao'>Laois</ref>" >
-     
+  <!ENTITY LIMC '<choice><expan xml:lang="la">Lexicon Iconographicon Mythologiae Classicae </expan><abbr xml:lang="la">LIMC</abbr></choice>' > <!-- Entité pour le LIMC -->
+  <!ENTITY KLY "<ref target ='cly'>Klytaimestra </ref>" >
+  <!ENTITY LAO "<ref target ='lao'>Laois</ref>" >
 ]>
 
-
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-
-
-
-
    <teiHeader>
-
-
       <fileDesc>
-
          <!-- titleStmt : informations sur la présente édition -->
          <titleStmt>
             <title>Encodage de deux notices issues du &LIMC; </title>
-
 
             <author>
                <orgName> École nationale des chartes</orgName>
                <persName>Maxime Griveau</persName>
             </author>
-
 
             <editor>
                <name>Éditions de l'école des chartes</name>
@@ -55,11 +39,6 @@
                <name>Ségolène Ablouy</name>
             </respStmt>
          </titleStmt>
-
-
-
-
-
 
          <!-- Présentation de l'édition sur laquelle est basée l'encodage -->
          <editionStmt>
@@ -170,8 +149,6 @@
                   </imprint>
                </monogr>
 
-
-
                <citedRange from="72" to="81" unit="pp"/>
                <citedRange from="185" to="187" unit="pp"/>
 
@@ -181,23 +158,22 @@
 
       <!-- Informations concernant l'encodage du texte : à mettre dans l'ODD-->
 
-
       <encodingDesc>
          <projectDesc>
-            <p> Nous avons chosi de n'encoder, et encore partiellement, que deux notices du &LIMC;
-               (Volume VI) en choissant à chaque fois les premiers paragraphes des sections, nous
-               n'encodrons donc que quelques pages sur les 8500 que comptent les IX volumes. Notre
+            <p>Nous avons choisi de n'encoder, et encore partiellement, que deux notices du &LIMC;
+               (Volume VI) en choisissant à chaque fois les premiers paragraphes des sections, nous
+               n'encoderons donc que quelques pages sur les 8500 que comptent les IX volumes. Notre
                objectif est ici de poser les bases d'un encodage plus systématique ensuite et
                potentiellement automatisable. Ce projet d'encodage part de la volonté de rendre le
-               &LIMC; plus accessible et simple d'utilisation. </p>
+               &LIMC; plus accessible et simple d'utilisation.</p>
          </projectDesc>
          <samplingDecl>
             <p>Ouvrage de référence pour les historiens de l'art, archéologues et iconographes, le
-               &LIMC; est un ouvrage essentiel dans l'étude des cultures méditéranéennes</p>
+               &LIMC; est un ouvrage essentiel dans l'étude des cultures méditerranéennes</p>
          </samplingDecl>
          <editorialDecl>
             <correction status="medium">
-               <p>L'encodage est réalisée à partir d'une transcription mannuelle du &LIMC; qui a été
+               <p>L'encodage est réalisée à partir d'une transcription manuelle du &LIMC; qui a été
                   relue une fois</p>
             </correction>
             <normalization method="silent">
@@ -218,17 +194,9 @@
                   transcrits en français pour une compréhension plus facile.</p>
                <p>Les noms des personnages sont abrégés dans l'ouvrage (clytemnestre devient K. dans
                   le corps de texte par exemple) les abréviations seront développées sans indication
-                  avec "choice" et "expan" car cela allourdi la transcription inutillement</p>
-
+                  avec "choice" et "expan" car cela alourdi la transcription entitlement</p>
             </interpretation>
-
          </editorialDecl>
-
-
-
-
-
-
 
          <!-- Information sur l'utilisation de taxonomies, etc. -->
          <classDecl>
@@ -258,8 +226,6 @@
             <language ident="gre"/>
             <language ident="fr"/>
          </langUsage>
-
-
 
          <!-- Description du sujet du LIMC en utilisant les taxonomies déclarées plus haut -->
          <textClass>
@@ -299,71 +265,77 @@
       <body>
          <div type="article" n="cly">
 
-            <!-- Comme la hiérarchie est essentielle dans notre document source, on le structurera en différentes div et sous entrées de dictionnaire (re)-->
+            <!-- Comme la hiérarchie est essentielle dans notre document source, on le structurera en différentes div
+            et sous entrées de dictionnaire (re)-->
             <head xml:id="cly">Klytaimestra</head>
             <entry n="1">
                <!-- n=1 veut dire que mon entrée n'a qu'un seul sens -->
                <re type="etymologie">
-                  <!-- Structuration des entrées en différente sous entrées, toutes typées en fonction de leur contenu (de façon normalisée) -->
-                  <etym> Formes les plus anciennes <choice>
+                  <!-- Structuration des entrées en différentes sous-entrées,
+                  toutes typées en fonction de leur contenu (de façon normalisée) -->
+                  <etym> Formes les plus anciennes
+                     <choice>
                         <orig xml:id="clutumita" n="1"> xml:lang="grc> Κλυταιμήστρα </orig>
-                        <!-- Dans l'ouvrage original, quand le nom mentionné apparaissait sur un objet présent dans le volume de planche, ce dernier était référencé ; nous ferons de même avec des id/ref ; comme nous n'encoderons qu'une partie des notices de personnage (ce serait trop long le cas échéant) ; certaines id pourraient rester sans ref.-->
+                        <!-- Dans l'ouvrage original, quand le nom mentionné apparaissait sur un objet présent
+                        dans le volume de planche, ce dernier était référencé ; nous ferons de même avec des id/ref ;
+                        comme nous n'encoderons qu'une partie des notices de personnage (ce serait trop long le cas échéant) ;
+                        certaines id pourraient rester sans ref.-->
                         <reg>Clutumita</reg>
                      </choice>
-                     <orig xml:id="clutmsta" n="2">Clutmsta</orig>, <orig n="3" xml:id="cluthumstha"
-                        >Cluthumustha</orig>, <orig n="4" xml:id="clunista">Clunista</orig>, <orig
-                        n="5" xml:id="clytaemnestra">Clytaemnestra</orig>,<!-- on utilise l'attribut n pour numéroter les différentes étymologie de l'entrée -->
-                     <orig xml:id="Clytemnestra" n="6">Clytemnestra</orig>, <orig
-                        xml:id="Clutemestra" n="7">Clutemestra</orig></etym>
+                     <orig xml:id="clutmsta" n="2">Clutmsta</orig>,
+                     <orig n="3" xml:id="cluthumstha">Cluthumustha</orig>,
+                     <orig n="4" xml:id="clunista">Clunista</orig>,
+                     <orig n="5" xml:id="clytaemnestra">Clytaemnestra</orig>,
+                     <!-- on utilise l'attribut @n pour numéroter les différentes étymologies de l'entrée -->
+                     <orig xml:id="Clytemnestra" n="6">Clytemnestra</orig>,
+                     <orig xml:id="Clutemestra" n="7">Clutemestra</orig></etym>
                </re>
 
                <re type="genealogie">
                   <!-- Les noms d'origine ne sont pas toujours indiqués, on les représente sous forme <orig> <reg> s'ils le sont -->
-                  Fille de <persName role="pere" xml:id="tyn"
-                        ><orig>Tyndareos</orig><reg>Tyndare</reg></persName>et de <persName
-                     role="mere">Leda</persName>, soeur d' <persName role="soeur"
-                  >Helene</persName>et des <persName role="frere"
-                           ><orig>Dioskouroi<reg>Dioscures</reg></orig></persName>, de <persName
-                     role="frere">Phoibe</persName>,<persName role="frere">Phylonoe </persName>et
-                     <persName role="soeur">Timandra</persName>. Klytaimestra a pour époux <persName
-                     role="mari" n="2" xml:id="aga">Agamemnon</persName> qui a tué <persName
-                     role="mari" n="1"><orig>Tantalos</orig><reg>Tantale </reg></persName>, son
-                  premier mari, et pour enfants<persName role="fille"
-                     >Chrysothemis</persName>,<persName role="fille"
-                        ><orig>Elektra</orig><reg>Electre</reg></persName>ou <persName role="fille"
-                     >Laodiké</persName>, <persName role="fille">Iphianassa</persName> et/ou
-                     <persName role="fille" xml:id="iph"
-                     ><orig>lphigeneia</orig><reg>Iphigénie</reg></persName> et <persName
-                     role="fils" xml:id="ore"><orig>Orestes</orig><reg>Oreste </reg></persName>; de
-                  son amant<persName role="mari" n="3" xml:id="egi"
-                        ><orig>Aigisthos</orig><reg>Egisthe</reg></persName> ,elle a <persName
-                     role="fils">Erigone</persName> et peut-être d'autres enfants<bibl> Sophocle
-                     Electre vers 589 ; Euripide Electre vers 62 et vers 626. </bibl>
+                  Fille de <persName role="pere" xml:id="tyn"><orig>Tyndareos</orig><reg>Tyndare</reg></persName> et de
+                  <persName role="mere">Leda</persName>,
+                  soeur d'<persName role="soeur">Helene</persName> et
+                  des <persName role="frere"><orig>Dioskouroi<reg>Dioscures</reg></orig></persName>,
+                  de <persName role="frere">Phoibe</persName>,
+                  <persName role="frere">Phylonoe </persName> et
+                  <persName role="soeur">Timandra</persName>.
+                  Klytaimestra a pour époux <persName role="mari" n="2" xml:id="aga">Agamemnon</persName>
+                  qui a tué <persName role="mari" n="1"><orig>Tantalos</orig><reg>Tantale </reg></persName>,
+                  son premier mari, et pour enfants
+                  <persName role="fille">Chrysothemis</persName>,
+                  <persName role="fille"><orig>Elektra</orig><reg>Electre</reg></persName> ou
+                  <persName role="fille" >Laodiké</persName>,
+                  <persName role="fille">Iphianassa</persName> et/ou
+                  <persName role="fille" xml:id="iph"><orig>lphigeneia</orig><reg>Iphigénie</reg></persName> et
+                  <persName role="fils" xml:id="ore"><orig>Orestes</orig><reg>Oreste</reg></persName> ;
+                  de son amant<persName role="mari" n="3" xml:id="egi"><orig>Aigisthos</orig><reg>Egisthe</reg></persName>,
+                  elle a <persName role="fils">Erigone</persName> et peut-être d'autres enfants
+                  <bibl>Sophocle Electre vers 589 ; Euripide Electre vers 62 et vers 626.</bibl>
                   <!-- Les références à des poèmes ou tragédies antiques seront indiqués dans des bibliographies non structurées car cela fait gagner du temps et que cela n'a pas d'intérêt de citer telle ou telle édition précise : la versification étant toujours la même -->
-                  Klytaimestra n'est pas mentionnée dans les tablettes mycéniennes; le problème de
-                  son origine préhellénique est lié à celui que pose l'Orestie. </re>
+                  Klytaimestra n'est pas mentionnée dans les tablettes mycéniennes ; le problème de
+                  son origine préhellénique est lié à celui que pose l'Orestie.</re>
 
-               <re type="sources_littéraires"> &KLY; se trouve au centre de deux épisodes
+               <re type="sources_littéraires">&KLY; se trouve au centre de deux épisodes
                   légendaires, le meurtre d'<ref target="aga">Agamemnon</ref> et sa propre mort qui
                   s'accomplit dans le cadre de la vengeance d'<ref target="ore">Oreste</ref>; elle
                   intervient également dans les autres mythes du cycle des Atrides et dans la
-                  guérison de <persName role="fils" xml:id="tel"
-                        ><reg>Télèpe</reg><orig>Telephos</orig></persName>. Les sources relatives à
-                  &KLY; comme aux autres Atrides sont variées; les plus riches sont les tragédies
-                  qui explorent les problèmes du matricide et de la relation des sexes; adultère,
+                  guérison de <persName role="fils" xml:id="tel"><reg>Télèpe</reg><orig>Telephos</orig></persName>.
+                  Les sources relatives à &KLY; comme aux autres Atrides sont variées ; les plus riches sont
+                  les tragédies qui explorent les problèmes du matricide et de la relation des sexes ; adultère,
                   meurtrière de son mari, mère indigne, orgueilleuse et tenace, d'une puissance
                   extraordinaire chez <name xml:id="esc">Eschyle</name>, &KLY; incarne la mauvaise
                   femme.
                   <!-- L'attribut name est ici utilisé pour différencier les figures mythologiques des personnes réelles -->
                   Le présent article rappelle les principaux événements de sa biographie et traite
                   de sa mort. Parmi les rares faits antérieurs à la guerre de Troie figure une
-                  malédiction d'<persName>Aphrodite</persName> qui condamna les filles de <ref
-                     target="tyn">Tyndare</ref> à être infidèles (Hes.frg. 176 Merkelbach/West;
+                  malédiction d'<persName>Aphrodite</persName> qui condamna les filles de
+                  <ref target="tyn">Tyndare</ref> à être infidèles (Hes.frg. 176 Merkelbach/West ;
                   Stesich., Page PMGfrg. 223 ; cf. Eur. Or. 2497250. 540—541 ; Paus. 3, 15, I I)1.
                   Le rôle de &KLY; dans les tragédies consacrées à <ref target="tel">Télèphe
-                  </ref>est incertain; il semble que chez <name>Euripide</name>elle suggérait au
-                  héros de s'emparer d'<ref target="ore">Oreste </ref>afin de fléchir <ref
-                     target="aga">Agamemnon </ref>et d'obtenir sa guérison, mais elle était saisie
+                  </ref>est incertain ; il semble que chez <name>Euripide</name>elle suggérait au
+                  héros de s'emparer d'<ref target="ore">Oreste</ref> afin de fléchir
+                  <ref target="aga">Agamemnon </ref>et d'obtenir sa guérison, mais elle était saisie
                   d'effroi à la vue du danger couru par son fils <ref target="tel">(Telephos)</ref>.
                   Le sacrifice d '<ref target="iph">Iphigénie</ref>, survenu avant ou après le
                   passage de <ref target="tel">Télèphe</ref> à Argos, est très tôt présenté comme
@@ -405,8 +377,9 @@
                      <biblStruct n="3">
                         <monogr>
                            <author>Blome, P.</author>
-                           <title xml:lang="ge">Diefigiirliche Bildtvelt Kretas in der geometrischen
-                              undfrüharchaischen Periode</title>
+                           <title xml:lang="ge">
+                              Diefigiirliche Bildtvelt Kretas in der geometrischen undfrüharchaischen Periode
+                           </title>
 
                            <imprint>
                               <publisher>ArchEph</publisher>
@@ -513,11 +486,14 @@
                <re type="catalogue">
                   <note type="informations">Certains documents ont déjà été présentés dans le
                      &LIMC;; se reporter s.v. pour la bibliographie, la description générale des
-                     scènes et des détails concernant les personnages autres que &KLY; ; on donne
+                     scènes et des détails concernant les personnages autres que &KLY; ; on donne
                      ici des compléments bibliographiques, des précisions sur &KLY; ou des
                      interprétations différentes.</note>
-                  <!-- Par catalogue on veut dire ensemble des oeuvres sur lesquelles le personnage est figuré-->
-                  <!-- Au lieu de se référer au volume de planches lié à notre texte, on créra un lien vers https://www.carc.ox.ac.uk/XDB/ASP/searchOpen.asp [beazley archive] pour les poteries (qui constituent 90 % des objets du LIMC), pour les autres oeuvres, si cela est possible on indiquera le lien vers un musée-->
+                  <!-- Par catalogue, on veut dire ensemble des œuvres sur lesquelles le personnage est figuré -->
+                  <!-- Au lieu de se référer au volume de planches lié à notre texte, on créera un lien
+                  vers https://www.carc.ox.ac.uk/XDB/ASP/searchOpen.asp [beazley archive] pour les poteries
+                  (qui constituent 90 % des objets du LIMC), pour les autres œuvres, si cela est possible,
+                  on indiquera le lien vers un musée-->
                   <re type="représentations_narratives">
                      <re type="documents_grecs">
                         <re type="double_meurtre" xml:id="dou_meu"/>
@@ -534,39 +510,43 @@
                            <!-- Pour la légende, on reprendra celle (bien plus complète) de Beazley archive -->
                         </figure>
                         <xr>Voir aussi : l'entrée <ref target="aga">Agamemnon</ref>.</xr>
-                        <!-- Dans le volume, référence est faite à l'illustration 87 d'Agamemnon, en TEI nous ferons un lien avec l'illustration correspondante en lui donnant une xml:id ; comme nous n'avons pas encodé Agamemnon ce n'est pas possible -->
+                        <!-- Dans le volume, référence est faite à l'illustration 87 d'Agamemnon, en TEI,
+                         nous ferons un lien avec l'illustration correspondante en lui donnant une xml:id ;
+                         comme nous n'avons pas encodé Agamemnon ce n'est pas possible -->
                         <re type="le_meurtre_d'Egiste"/>
                         <figure n="2">
-                           <graphic
-                              url="https://www.beazley.ox.ac.uk/record/6ED583F8-5381-4042-AF4E-CA49003EA4A3"
+                           <graphic url="https://www.beazley.ox.ac.uk/record/6ED583F8-5381-4042-AF4E-CA49003EA4A3"
                               xml:id="cly_2"/>
                            <ab type="caption">a: death of aigisthos, orestes, klytaimestra (all
                               named) b: klytaimestra and talthybios</ab>
                         </figure>
                         <figure n="3">
-                           <graphic
-                              url="https://www.beazley.ox.ac.uk/record/DD3D956F-4D5A-4C9B-B305-8901ABBDF15D"
+                           <graphic url="https://www.beazley.ox.ac.uk/record/DD3D956F-4D5A-4C9B-B305-8901ABBDF15D"
                               xml:id="cly_3"/>
                            <ab type="caption">a: death of <ref target="egi">aigisthos</ref>, <ref
                                  target="ore">orestes</ref>, <ref target="cly">klytaimestra </ref>
                               with axe, woman, man (?) b: draped man with sceptre, women</ab>
                         </figure>
                         <figure n="4">
-                           <graphic
-                              url="https://www.beazley.ox.ac.uk/record/0761FB38-49A7-4B0E-828F-B74648C5C761"
+                           <graphic url="https://www.beazley.ox.ac.uk/record/0761FB38-49A7-4B0E-828F-B74648C5C761"
                               xml:id="cly_4"/>
                            <ab type="caption">body: undecorated shoulder: death of aigisthos,
                               aigisthos, orestes, klytaimestra with double axe, telamedes
                               (named)</ab>
                         </figure>
                         <xr>Voir aussi :<ref target="cly_1">Clytemnestre n°1</ref></xr>
-                        <!-- Possibilité de mettre une liste de références liées ici en reprenant celles du LIMC ; on indiquera tous les personnages et objets qui figurent Clytemnestre dans la scène du meurtre d'Egiste. Par exemple si la face A représente la mort d'Agamenon et la Face B celle d'Egiste on décidera de ne pas créer de doubler mais des liens entre les figures.-->
+                        <!-- Possibilité de mettre une liste de références liées ici en reprenant celles du LIMC ;
+                        on indiquera tous les personnages et objets qui figurent Clytemnestre dans la scène
+                        du meurtre d'Egiste. Par exemple si la face A représente la mort d'Agamenon et la
+                        Face B celle d'Egiste, on décidera de ne pas créer de doubler, mais des liens entre les figures.-->
                         <re type="représentations_incertaines" xml:id="sce_inc"> </re>
                         <xr>Voir aussi : <ref target="egi">Egiste n°38</ref></xr>
-                        <!-- Si on reprend la numérotation du LIMC, l'objet référencé 38 à Égisthe est une réprésentation incertaine de son meurtre ou Clytemnestre apparait (c'était pour donner un exemple) -->
+                        <!-- Si on reprend la numérotation du LIMC, l'objet référencé 38 à Égisthe est une
+                        réprésentation incertaine de son meurtre ou Clytemnestre apparait (c'était pour donner un exemple) -->
                      </re>
                   </re>
-                  <!-- Encore une fois, le texte est tronqué. On a choisi uniquement les représentations de Clytemnestre, et uniquement les objets grecs, dans la scène du meutre d'Egiste et d'Agamemnon (qui est la plus fréquente)-->
+                  <!-- Encore une fois, le texte est tronqué. On a choisi uniquement les représentations de Clytemnestre,
+                  et uniquement les objets grecs, dans la scène du meutre d'Egiste et d'Agamemnon (qui est la plus fréquente)-->
                </re>
 
                <re type="commentaire"> Le meurtre de &KLY; est un sujet assez rare, figuré seul ou
@@ -580,24 +560,21 @@
                   auquel le thème semble approprié. Le matériel rassemblé est de nature artisanale,
                   avec quelques exceptions, <ref target="cly_32">32 </ref>et surtout la peinture de
                   Théon qui
-                  <!-- Cette ref ne renvoie vers rien car nous n'avons pas encodé toutes les images, si cela avait été le cas elle aurait pointé vers l'image correspondante -->
+                  <!-- Cette ref ne renvoie vers rien, car nous n'avons pas encodé toutes les images,
+                  si cela avait été le cas, elle aurait pointé vers l'image correspondante -->
                   semble introduire le matricide dans le grand art. A côté des représentations
                   assurées sont signalées de nombreuses <ref target="sce_inc">scènes
-                     incertaines</ref>; il est hasardeux de reconnaître <ref target="ore"
-                     >Oreste</ref>-&KLY;. dans telle ou telle poursuite d'une femme par un homme
-                  armé, sujet fréquent sur les vases grecs; voir la discussion des principaux
-                  documents par Prag (<ref target="cly_39">39</ref>—<ref target="cly_40">40</ref>)
-                  et les catalogues constitués à propos d'autres personnages, notamment <ref
-                     target="the">Thésée</ref> et <ref target="ait">Aithra</ref>, <ref target="men"
-                     >Ménélas</ref> et <ref target="hel">Hélène</ref> ou <ref target="the"
-                     >Thésée</ref> et <ref target="med">Médée</ref>
+                  incertaines</ref>; il est hasardeux de reconnaître <ref target="ore">Oreste</ref>-&KLY;.
+                  dans telle ou telle poursuite d'une femme par un homme armé, sujet fréquent sur les vases grecs ;
+                  voir la discussion des principaux documents par Prag
+                  (<ref target="cly_39">39</ref>—<ref target="cly_40">40</ref>)
+                  et les catalogues constitués à propos d'autres personnages, notamment <ref target="the">Thésée</ref>
+                  et <ref target="ait">Aithra</ref>, <ref target="men">Ménélas</ref> et <ref target="hel">Hélène</ref>
+                  ou <ref target="the">Thésée</ref> et <ref target="med">Médée</ref>
                   <bibl>(cf. Sourvinou- lnwood, Ch., Theseus as Son and Stepson [19791).></bibl>
                </re>
 
-
-
             </entry>
-
 
          </div>
 
@@ -607,42 +584,46 @@
             <entry n="1">
                <!-- n=1 veut dire que mon entrée n'a qu'un seul sens -->
                <re type="etymologie">
-                  <!-- Structuration des entrées en différente sous entrées, toutes typées en fonction de leur contenu (de façon normalisée) -->
+                  <!-- Structuration des entrées en différentes sous-entrées, toutes typées en fonction de leur contenu
+                  (de façon normalisée) -->
                   <etym> Formes les plus anciennes <choice>
                         <orig xml:id="Laius" n="1"> xml:lang="grc"> Λάϊος </orig>
-                        <!-- Dans l'ouvrage original, quand le nom mentionné apparaissait sur un objet présent dans le volume de planche, ce dernier était référencé ; nous ferons de même avec des id/ref ; comme nous n'encoderons qu'une partie des notices de personnage (ce serait trop long le cas échéant) ; certaines id pourraient rester sans ref.-->
+                        <!-- Dans l'ouvrage original, quand le nom mentionné apparaissait sur un objet présent
+                        dans le volume de planche, ce dernier était référencé ; nous ferons de même avec des id/ref ;
+                        comme nous n'encoderons qu'une partie des notices de personnage (ce serait trop long le cas échéant) ;
+                        certaines id pourraient rester sans ref.-->
                         <reg>Laïos "le gauche"</reg>
                      </choice>
                   </etym>
                </re>
 
                <re type="genealogie">
-                  <re type="genealogie"> Roi de Thèbes, descendant de <persName xml:id="kadmons"
-                        role="ancetre">Kadmos</persName>, fils de <persName xml:id="labdakos"
-                        role="pere">Labdakos</persName>, époux de <persName xml:id="jocaste"
-                        role="epouse">Jocaste</persName> dans les traditions les plus courantes père
-                     d' <persName xml:id="oedipe" role="fils"
-                           ><reg>Oedipe</reg><orig>(Oidipous)</orig></persName> , par lequel il est
-                     tué, comme l'avait prédit l'oracle. </re>
+                  <re type="genealogie"> Roi de Thèbes, descendant de
+                     <persName xml:id="kadmons" role="ancetre">Kadmos</persName>,
+                     fils de <persName xml:id="labdakos" role="pere">Labdakos</persName>,
+                     époux de <persName xml:id="jocaste" role="epouse">Jocaste</persName>
+                     dans les traditions les plus courantes père
+                     d' <persName xml:id="oedipe" role="fils"><reg>Oedipe</reg><orig>(Oidipous)</orig></persName>,
+                     par lequel il est tué, comme l'avait prédit l'oracle.</re>
                   <!-- Les noms d'origine ne sont pas toujours indiqués, on les représente sous forme <orig> <reg> s'ils le sont -->
                </re>
 
                <re type="sources_littéraires"> La légende de &LAO;, et surtout sa paternité maudite
                   et sa mort, occupent une place importante dans le cycle thébain. Si le nom même de
                   &LAO;. n'apparaît que tardivement dans les textes subsistants <bibl>(Pindare O. 2,
-                     42—44)</bibl>, le parricide d'<ref target="oed">Oedipe</ref> était déjà connu
+                  42—44)</bibl>, le parricide d'<ref target="oed">Oedipe</ref> était déjà connu
                   d'Homère <bibl>(Odyssee 1 1, 273—274)</bibl>,et vraisemblablement des auteurs de
                   deux épopées perdues, une Illébaide et une Oidipodie. Au Ve s. av. J.-C.,
                   nombreuses furent les oeuvres qui ont dû concerner &LAO;: entre autres une
                   tétralogie d'<name>Eschyle</name>, dont il ne reste que les Sept contre Thèbes
                   ainsi que le titre et quelques fragments. des trois autres pièces (Laios, Oedipe,
                   La Sphinx), un <ref target="oed">Oedipe</ref> de <name>Sophocle</name>, Chrysippos
-                     d'<name>Euripide</name> ; de ces pièces perdues nous savons peu de choses, mais
+                  d'<name>Euripide</name> ; de ces pièces perdues nous savons peu de choses, mais
                   plusieurs passages de <bibl>Eschyle. Septem (742—749)</bibl>,<bibl>Sophocle Oedipe
-                     roi (711—753 ; 800—813)</bibl>, Eurpide, phoenissae (7—45) dessinent
+                  roi (711—753 ; 800—813)</bibl>, Eurpide, phoenissae (7—45) dessinent
                   l'essentiel de la légende; celle-ci peut être complétée par les récits postérieurs
                   de <bibl>Diodore de Sicile (4, 64)</bibl>, de <name>Pausanias</name>,
-                     <name>d'Apollodore, d'Hygin</name>, qui donnent de nombreuses variantes. [...] </re>
+                  <name>d'Apollodore, d'Hygin</name>, qui donnent de nombreuses variantes. [...]</re>
                <!-- La notice est tronquée pour des raisons de temps d'encodage -->
 
 
@@ -651,7 +632,7 @@
                      <biblStruct n="1">
                         <monogr>
                            <author>Aélion, R.</author>
-                           <title>Quelques grands mythes héroïques dans l'oeuvre d'Euripide</title>
+                           <title>Quelques grands mythes héroïques dans l'œuvre d'Euripide</title>
 
                            <imprint>
                               <date>1986</date>
@@ -705,19 +686,18 @@
                   <re type="Laios_enlève_Chrysippe">
                      <!-- Aucune image associée dans le volume papier, uniquement des renvois vers d'autres notices : on respecte cette syntaxe en indiquant en note les éléments notés. -->
                      <note> Ce thème semble inconnu de l'art grec continental ; il est attesté à
-                        partir du IVe s. av. J.-C. en Etrurie et à Préneste (<ref target="chr_7"
-                           >7</ref> et <ref target="chr_16">16</ref>) et en Grande-Grèce : Apulie
-                           (<ref target="chr_2">2</ref>
-                        <ref target="chr_3">3</ref>
-                        <ref target="chr_4">4</ref>). On peut aussi rattacher, avec quelques
-                        réserves, à trois masques tragiques du IV s. av. J.-C., trouvés dans la même
+                        partir du IVe s. av. J.-C. en Etrurie et à Préneste (<ref target="chr_7">7</ref>
+                        et <ref target="chr_16">16</ref>) et en Grande-Grèce : Apulie (<ref target="chr_2">2</ref>
+                        <ref target="chr_3">3</ref> <ref target="chr_4">4</ref>). On peut aussi rattacher, avec
+                        quelques réserves, à trois masques tragiques du IV s. av. J.-C., trouvés dans la même
                         tombe, conservés à Lipari, Mus. Eoliano, interprétés comme ceux de &LAO;;,
-                           <ref target="chr">Chrysippos </ref>et <ref target="hip">Hippodamie </ref>
-                           (<ref target="hip_1">1</ref>), et rapprochés du Chrysippos d'Euripide par
-                              <bibl><name>Bernabò Brea</name> (Menandro e il teatro grec onelle
-                           terracotte liparesi [1981] ; pour &LAO; : 38 A 8)</bibl></note>
-                     <xr>Voir aussi :<ref target="chr_1">Chrysippos 1</ref><ref target="chr_2"
-                           >2</ref>
+                        <ref target="chr">Chrysippos </ref>et <ref target="hip">Hippodamie </ref>
+                        (<ref target="hip_1">1</ref>), et rapprochés du Chrysippos d'Euripide par
+                        <bibl><name>Bernabò Brea</name> (Menandro e il teatro grec onelle terracotte liparesi [1981] ;
+                        pour &LAO; : 38 A 8)</bibl></note>
+                     <xr>Voir aussi :
+                        <ref target="chr_1">Chrysippos 1</ref>
+                        <ref target="chr_2">2</ref>
                         <ref target="chr_3">3</ref>
                         <ref target="chr_4">4</ref>
                         <ref target="chr_5">5</ref>
@@ -726,31 +706,31 @@
                   </re>
                   <re type="Laios_consulte_Apollon_à_Delphes">
                      <re type="document_prénestin">
-                        <note> Voir <ref target="apo_4">Apollon 4</ref>, la scène d'interprétation
-                           es t discutée: &LAO;, <ref target="oed">Oedipe </ref>ou <ref target="xou"
-                              >Xouthos</ref> devant <ref target="apo">Apollon</ref>?</note>
+                        <note>
+                           Voir <ref target="apo_4">Apollon 4</ref>, la scène d'interprétation est discutée: &LAO;,
+                           <ref target="oed">Oedipe</ref> ou
+                           <ref target="xou">Xouthos</ref> devant
+                           <ref target="apo">Apollon</ref> ?
+                        </note>
                      </re>
                      <re type="document_romain">
                         <figure xml:id="lao_7">
-                           <graphic
-                              url="https://utpictura18.univ-amu.fr/notice/20592-sarcophage-dadonis-couvercle-depareille-theme-doedipe"/>
+                           <graphic url="https://utpictura18.univ-amu.fr/notice/20592-sarcophage-dadonis-couvercle-depareille-theme-doedipe"/>
                            <!-- C'est la seule image que l'on peut trouver concernant ce document : comme il s'agit d'automatiser les taches on pourra, dans le futur, reprendre les images du LIMC plutot que d'en chercher d'autres -->
                            <ab>Couvercle de sarcophage. Vatican (anc.Latran), Mus. Greg. Prof.
                               10408. De Rome ; Sept scènes consécutives: 1) &LAO; suivi d'un
-                              serviteur offre un sacrifice devant l'autel d'<ref target="apo"
-                                 >Apollon</ref>. 2) L. assis sur un rocher, vers la gauche, attitude
-                              méditative. 3-6)<ref target="oed">Oedipe</ref>. 7) Char de &LAO; avec
-                              bige au galop vers la droite et serviteur; &LAO; debout sur son char,
-                              est saisi aux cheveux et entraîné en arrière par <ref target="oed"
-                                 >Oedipe</ref>.</ab>
+                              serviteur offre un sacrifice devant l'autel d'<ref target="apo">Apollon</ref>. 2)
+                              L. assis sur un rocher, vers la gauche, attitude méditative. 3-6)
+                              <ref target="oed">Oedipe</ref>. 7) Char de &LAO; avec bige au galop vers
+                              la droite et serviteur; &LAO; debout sur son char, est saisi aux cheveux et
+                              entraîné en arrière par <ref target="oed">Oedipe</ref>.</ab>
                         </figure>
-                        <!-- L'oeuvre ne disposant pas de notice, on conservera celle du LIMC -->
+                        <!-- L'œuvre ne disposant pas de notice, on conservera celle du LIMC -->
                      </re>
                      <re type="Laois_et_l'abandon_d'Oedipe">
                         <re type="document_réfuté">
                            <figure xml:id="lao_2">
-                              <graphic
-                                 url="https://www.beazley.ox.ac.uk/record/EDBEFD06-6DAF-4779-BE3A-D34105EA600D"/>
+                              <graphic url="https://www.beazley.ox.ac.uk/record/EDBEFD06-6DAF-4779-BE3A-D34105EA600D"/>
                               <ab type="caption"> A: Euphorbos (named) in chitoniskos and petasos
                                  with spear carrying the infant oedipus (named) B: draped men with
                                  staff.</ab>
@@ -764,9 +744,7 @@
                      </re>
                      <re type="Le_combat_avec_Oedipe_et_la_mort_de_Laios">
                         <figure xml:id="lao_3">
-
-                           <graphic
-                              url="https://www.beazley.ox.ac.uk/record/2332C4CA-375A-42A0-BCE0-D486CCFBC284"/>
+                           <graphic url="https://www.beazley.ox.ac.uk/record/2332C4CA-375A-42A0-BCE0-D486CCFBC284"/>
 
                            <ab type="caption"> (fragments): death of laios, oedipus (?), man in
                               animal skin with kentron (named), chariot, woman (named). Une grande
@@ -777,33 +755,35 @@
                         </figure>
                      </re>
                   </re>
-                  <!-- Par catalogue on veut dire ensemble des oeuvres sur lesquelles le personnage est figuré-->
-                  <!-- Au lieu de se référer au volume de planches lié à notre texte, on créra un lien vers https://www.carc.ox.ac.uk/XDB/ASP/searchOpen.asp [beazley archive] pour les poteries (qui constituent 90 % des objets du LIMC), pour les autres oeuvres, si cela est possible on indiquera le lien vers un catalogue de musée-->
+                  <!-- Par catalogue on veut dire ensemble des œuvres sur lesquelles le personnage est figuré-->
+                  <!-- Au lieu de se référer au volume de planches lié à notre texte, on créera un lien vers
+                  https://www.carc.ox.ac.uk/XDB/ASP/searchOpen.asp [beazley archive] pour les poteries
+                  (qui constituent 90 % des objets du LIMC), pour les autres œuvres, si cela est possible,
+                  on indiquera le lien vers un catalogue de musée-->
                </re>
                <!-- liste tronquée -->
 
                <re type="commentaire"> En iconographie, l'histoire de &LAO; semble commencer et
                   finir avec des images de char; mais aucun document ne suggère une relation
                   quelconque entre l'enlèvement de Chrysippe, la malédiction des Labdacides (sauf,
-                  peut-être, <ref target="lao_4">4 </ref>Chrysippos <ref target="chr_1">1</ref><ref
-                     target="chr_7">7</ref> ?) et la mort de &LAO; Sur les scènes d'enlèvement &LAO;
+                  peut-être, <ref target="lao_4">4 </ref>Chrysippos <ref target="chr_1">1</ref>
+                  <ref target="chr_7">7</ref> ?) et la mort de &LAO; Sur les scènes d'enlèvement &LAO;
                   est représenté en Grande-Grèce comme un homme jeune, imberbe, nu ou légèrement
-                  vêtu, parfois armé; debout sur son char, entraîné vers la gauche par un attelage
-                  au galop, il maintient fermement du bras gauche le jeune <ref target="chr"
-                     >Chrysippe</ref> ; en Etrurie, même disposition générale, mais &LAO; est vêtu.
-                  La mort de &LAO; , représentée une seule fois en Attique (<ref target="chr_3"
-                     >3</ref>, très incomplet), est attestée dans le monde romain d'une manière
-                  intéressante (<ref target="lao_4">4</ref>—<ref target="lao_7">7</ref>).Sur <ref
-                     target="lao_7">7</ref>, on a cru retrouver la succession des événements tels
-                  que les raconte le prologue des Phénicienne. Mais on constate surtout que,
-                  contrairement à ce que disent les textes dans lesquels &LAO; intervient assez
-                  brutalement dans l'altercation, il apparaît plutôt comme une victime. C'est
+                  vêtu, parfois armé ; debout sur son char, entraîné vers la gauche par un attelage
+                  au galop, il maintient fermement du bras gauche le jeune <ref target="chr">Chrysippe</ref> ;
+                  en Etrurie, même disposition générale, mais &LAO; est vêtu. La mort de &LAO;,
+                  représentée une seule fois en Attique (<ref target="chr_3">3</ref>, très incomplet),
+                  est attestée dans le monde romain d'une manière intéressante (<ref target="lao_4">4</ref>—
+                  <ref target="lao_7">7</ref>).Sur <ref target="lao_7">7</ref>, on a cru retrouver
+                  la succession des événements tels que les raconte le prologue des Phéniciennes.
+                  Mais on constate surtout que, contrairement à ce que disent les textes dans lesquels &LAO;
+                  intervient assez brutalement dans l'altercation, il apparaît plutôt comme une victime. C'est
                   particulièrement net sur <ref target="lao_5">5</ref>, où il est véritablement
                   assassiné par <ref target="oed">Oedipe</ref>, devant un pilier qui préfigure en
-                  quelque sorte la stèle de sa tombe; mais la présence de la figure féminine
+                  quelque sorte la stèle de sa tombe ; mais la présence de la figure féminine
                   allégorique <ref target="agn">Agnoia</ref>, et son geste de surprise ou d'effroi,
-                  soulignent le fait que père et fils ne se sont pas reconnus. Sur <ref
-                     target="lao_7">7</ref>, la mort brutale de &LAO; est clairement indiquée comme
+                  soulignent le fait que père et fils ne se sont pas reconnus. Sur <ref target="lao_7">7</ref>,
+                  la mort brutale de &LAO; est clairement indiquée comme
                   l'aboutissement de l'ordre, non respecté, d'<ref target="apo">Apollon</ref> Mais
                   il faut reconnaître avec <ref target="bibl_moret">Moret</ref> que si <!-- référence à notre liste bibliographique -->
                   <cit>
