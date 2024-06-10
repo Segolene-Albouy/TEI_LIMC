@@ -8,7 +8,7 @@
 
 <!DOCTYPE TEI [
   <!ENTITY LIMC '<choice><expan xml:lang="la">Lexicon Iconographicon Mythologiae Classicae </expan><abbr xml:lang="la">LIMC</abbr></choice>' > <!-- Entité pour le LIMC -->
-  <!ENTITY KLY "<ref target ='cly'>Klytaimestra </ref>" >
+  <!ENTITY KLY "<ref target ='cly'>Klytaimestra</ref>" >
   <!ENTITY LAO "<ref target ='lao'>Laois</ref>" >
 ]>
 
@@ -20,13 +20,13 @@
             <title>Encodage de deux notices issues du &LIMC; </title>
 
             <author>
-               <orgName> École nationale des chartes</orgName>
+               <orgName>École nationale des chartes</orgName>
                <persName>Maxime Griveau</persName>
             </author>
 
             <editor>
-               <name>Éditions de l'école des chartes</name>
-               <!-- En ademetant que cette publication soit destinnée à être publiée par les éditions de l'École. -->
+               <name>Éditions de l'École des chartes</name>
+               <!-- En admettant que cette publication soit destine à être publiée par les éditions de l'École. -->
                <country xml:id="FR">France</country>
             </editor>
 
@@ -35,8 +35,8 @@
                <name>Maxime Griveau</name>
             </respStmt>
             <respStmt>
-               <resp xml:id="correctrice">Personne corrigeant l'ecodage</resp>
-               <name>Ségolène Ablouy</name>
+               <resp xml:id="correctrice">Personne corrigeant l'encodage</resp>
+               <name>Ségolène Albouy</name>
             </respStmt>
          </titleStmt>
 
@@ -113,12 +113,12 @@
 
          <notesStmt>
             <note>La publication des 9 volumes du &LIMC; a durée de 1981 à 1999, nous ne considerons
-               pour cet encodage dans notre Header que le volume encodé, si un encodage de la
+               pour cet encodage dans notre header que le volume encodé, si un encodage de la
                totalité des volumes du &LIMC; est projeté, il conviendra de tous les renseigner
                individuellement dans le header.</note>
             <note>Les volumes du LIMC sont accompagnés de volumes de planches contenant les images
                des objets mentionnés, nous les ignorons ici car nous allons renvoyer vers des images
-               de meilleur qualité (et les métadonnées liées) sur la base de données en ligne
+               de meilleure qualité (et les métadonnées liées) sur la base de données en ligne
                Bezaley Archive</note>
          </notesStmt>
 
@@ -129,7 +129,7 @@
             <biblStruct>
 
                <analytic>
-                  <author><persName xml:lang="FR"> Morizot Yvette </persName></author>
+                  <author><persName xml:lang="FR"> Morizot Yvette</persName></author>
                   <title><ref target="cly"/></title>
                   <author><persName xml:lang="FR">Odette Touchefeu-Meynier</persName></author>
                   <title><ref target="lao"/></title>
@@ -192,9 +192,9 @@
             <interpretation>
                <p>Les caractères grecs seront conservés sous forme de leur équivalent unicode et
                   transcrits en français pour une compréhension plus facile.</p>
-               <p>Les noms des personnages sont abrégés dans l'ouvrage (clytemnestre devient K. dans
+               <p>Les noms des personnages sont abrégés dans l'ouvrage (Clytemnestre devient K. dans
                   le corps de texte par exemple) les abréviations seront développées sans indication
-                  avec "choice" et "expan" car cela alourdi la transcription entitlement</p>
+                  avec "choice" et "expan" car cela alourdi la transcription entitlement <!--?--></p>
             </interpretation>
          </editorialDecl>
 
@@ -252,7 +252,7 @@
 
          <change when="2023-12-01">Ajouts des métadonnées manquantes dans le teiHeader</change>
          <change when="2023-12-23">Début de l'encodage du texte</change>
-         <change when="2023-12-26"> Encodage de la notice de Clytemnstre en totalité</change>
+         <change when="2023-12-26">Encodage de la notice de Clytemnstre en totalité</change>
          <change when="2023-12-30">Encodage de la notice de Laois</change>
          <change when="2024-01-06">Relecture de l'encodage, modifications mineures
             apportées</change>
@@ -275,7 +275,7 @@
                   toutes typées en fonction de leur contenu (de façon normalisée) -->
                   <etym> Formes les plus anciennes
                      <choice>
-                        <orig xml:id="clutumita" n="1"> xml:lang="grc> Κλυταιμήστρα </orig>
+                        <orig xml:id="clutumita" n="1" xml:lang="grc"> Κλυταιμήστρα </orig>
                         <!-- Dans l'ouvrage original, quand le nom mentionné apparaissait sur un objet présent
                         dans le volume de planche, ce dernier était référencé ; nous ferons de même avec des id/ref ;
                         comme nous n'encoderons qu'une partie des notices de personnage (ce serait trop long le cas échéant) ;
@@ -301,7 +301,7 @@
                   <persName role="frere">Phylonoe </persName> et
                   <persName role="soeur">Timandra</persName>.
                   Klytaimestra a pour époux <persName role="mari" n="2" xml:id="aga">Agamemnon</persName>
-                  qui a tué <persName role="mari" n="1"><orig>Tantalos</orig><reg>Tantale </reg></persName>,
+                  qui a tué <persName role="mari" n="1"><orig>Tantalos</orig><reg>Tantale</reg></persName>,
                   son premier mari, et pour enfants
                   <persName role="fille">Chrysothemis</persName>,
                   <persName role="fille"><orig>Elektra</orig><reg>Electre</reg></persName> ou
@@ -309,14 +309,17 @@
                   <persName role="fille">Iphianassa</persName> et/ou
                   <persName role="fille" xml:id="iph"><orig>lphigeneia</orig><reg>Iphigénie</reg></persName> et
                   <persName role="fils" xml:id="ore"><orig>Orestes</orig><reg>Oreste</reg></persName> ;
-                  de son amant<persName role="mari" n="3" xml:id="egi"><orig>Aigisthos</orig><reg>Egisthe</reg></persName>,
+                  de son amant <persName role="mari" n="3" xml:id="egi"><orig>Aigisthos</orig><reg>Egisthe</reg></persName>,
                   elle a <persName role="fils">Erigone</persName> et peut-être d'autres enfants
                   <bibl>Sophocle Electre vers 589 ; Euripide Electre vers 62 et vers 626.</bibl>
-                  <!-- Les références à des poèmes ou tragédies antiques seront indiqués dans des bibliographies non structurées car cela fait gagner du temps et que cela n'a pas d'intérêt de citer telle ou telle édition précise : la versification étant toujours la même -->
+                  <!-- Les références à des poèmes ou tragédies antiques seront indiqués dans 
+                     des bibliographies non structurées car cela fait gagner du temps et que 
+                     cela n'a pas d'intérêt de citer telle ou telle édition précise : la 
+                     versification étant toujours la même -->
                   Klytaimestra n'est pas mentionnée dans les tablettes mycéniennes ; le problème de
                   son origine préhellénique est lié à celui que pose l'Orestie.</re>
 
-               <re type="sources_littéraires">&KLY; se trouve au centre de deux épisodes
+               <re type="sources_litteraires">&KLY; se trouve au centre de deux épisodes
                   légendaires, le meurtre d'<ref target="aga">Agamemnon</ref> et sa propre mort qui
                   s'accomplit dans le cadre de la vengeance d'<ref target="ore">Oreste</ref>; elle
                   intervient également dans les autres mythes du cycle des Atrides et dans la
@@ -501,7 +504,9 @@
                            <graphic
                               url="https://www.beazley.ox.ac.uk/record/2FEDFC29-F5D2-4D32-BEFB-339311E85E5E"
                               xml:id="cly_1"/>
-                           <!-- Les images auront toutes des xml:id pour s'y référer dans le cas où l'objet représente plusieurs personnages ; le système de nommage sera toujours : les trois premières lettres du nom français suivies d'un "_" puis d'un numéro d'ordre -->
+                           <!-- Les images auront toutes des xml:id pour s'y référer dans le cas où l'objet 
+                              représente plusieurs personnages ; le système de nommage sera toujours : les trois 
+                              premières lettres du nom français suivies d'un "_" puis d'un numéro d'ordre -->
                            <ab type="caption">face a: death of agamemnon, in net, aigisthos with
                               sword, women, one with double axe (klytaimestra), all in building
                               (doric entablature with ionic column) face b: death of aigisthos,
@@ -558,13 +563,13 @@
                   diffusion jusqu'en Gaule et en Espagne; certaines des autres représentations ont
                   été également recueillies sur le sol italique et/ou dans un contexte funéraire,
                   auquel le thème semble approprié. Le matériel rassemblé est de nature artisanale,
-                  avec quelques exceptions, <ref target="cly_32">32 </ref>et surtout la peinture de
+                  avec quelques exceptions, <ref target="cly_32">32</ref> et surtout la peinture de
                   Théon qui
                   <!-- Cette ref ne renvoie vers rien, car nous n'avons pas encodé toutes les images,
                   si cela avait été le cas, elle aurait pointé vers l'image correspondante -->
                   semble introduire le matricide dans le grand art. A côté des représentations
                   assurées sont signalées de nombreuses <ref target="sce_inc">scènes
-                  incertaines</ref>; il est hasardeux de reconnaître <ref target="ore">Oreste</ref>-&KLY;.
+                  incertaines</ref> ; il est hasardeux de reconnaître <ref target="ore">Oreste</ref>-&KLY;.
                   dans telle ou telle poursuite d'une femme par un homme armé, sujet fréquent sur les vases grecs ;
                   voir la discussion des principaux documents par Prag
                   (<ref target="cly_39">39</ref>—<ref target="cly_40">40</ref>)
@@ -608,15 +613,15 @@
                   <!-- Les noms d'origine ne sont pas toujours indiqués, on les représente sous forme <orig> <reg> s'ils le sont -->
                </re>
 
-               <re type="sources_littéraires"> La légende de &LAO;, et surtout sa paternité maudite
+               <re type="sources_litteraires">La légende de &LAO;, et surtout sa paternité maudite
                   et sa mort, occupent une place importante dans le cycle thébain. Si le nom même de
                   &LAO;. n'apparaît que tardivement dans les textes subsistants <bibl>(Pindare O. 2,
                   42—44)</bibl>, le parricide d'<ref target="oed">Oedipe</ref> était déjà connu
                   d'Homère <bibl>(Odyssee 1 1, 273—274)</bibl>,et vraisemblablement des auteurs de
                   deux épopées perdues, une Illébaide et une Oidipodie. Au Ve s. av. J.-C.,
-                  nombreuses furent les oeuvres qui ont dû concerner &LAO;: entre autres une
+                  nombreuses furent les œuvres qui ont dû concerner &LAO;: entre autres une
                   tétralogie d'<name>Eschyle</name>, dont il ne reste que les Sept contre Thèbes
-                  ainsi que le titre et quelques fragments. des trois autres pièces (Laios, Oedipe,
+                  ainsi que le titre et quelques fragments des trois autres pièces (Laios, Oedipe,
                   La Sphinx), un <ref target="oed">Oedipe</ref> de <name>Sophocle</name>, Chrysippos
                   d'<name>Euripide</name> ; de ces pièces perdues nous savons peu de choses, mais
                   plusieurs passages de <bibl>Eschyle. Septem (742—749)</bibl>,<bibl>Sophocle Oedipe
@@ -734,7 +739,7 @@
                               <ab type="caption"> A: Euphorbos (named) in chitoniskos and petasos
                                  with spear carrying the infant oedipus (named) B: draped men with
                                  staff.</ab>
-                              <note> Il n'y a pas lieu de retenir l'hypothèse de <name>Rocchetti
+                              <note>Il n'y a pas lieu de retenir l'hypothèse de <name>Rocchetti
                                  </name>selon lequel il pourrait s'agir de &LAO; le peintre
                                  d'Achille a l'habitude de placer ainsi, en revers, un personnage
                                  debout, isolé, sans qu'aucun signe suggère le lien qu'il pourrait
@@ -750,7 +755,7 @@
                               animal skin with kentron (named), chariot, woman (named). Une grande
                               partie de la scène a disparu, y compris &LAO;; l'identification est
                               suggérée par les inscriptions [O]IDIPODES, KALLIOPA, SIKON (valet de
-                              &LAO;) </ab>
+                              &LAO;)</ab>
 
                         </figure>
                      </re>
@@ -763,10 +768,10 @@
                </re>
                <!-- liste tronquée -->
 
-               <re type="commentaire"> En iconographie, l'histoire de &LAO; semble commencer et
-                  finir avec des images de char; mais aucun document ne suggère une relation
+               <re type="commentaire">En iconographie, l'histoire de &LAO; semble commencer et
+                  finir avec des images de char ; mais aucun document ne suggère une relation
                   quelconque entre l'enlèvement de Chrysippe, la malédiction des Labdacides (sauf,
-                  peut-être, <ref target="lao_4">4 </ref>Chrysippos <ref target="chr_1">1</ref>
+                  peut-être, <ref target="lao_4">4</ref>Chrysippos <ref target="chr_1">1</ref>
                   <ref target="chr_7">7</ref> ?) et la mort de &LAO; Sur les scènes d'enlèvement &LAO;
                   est représenté en Grande-Grèce comme un homme jeune, imberbe, nu ou légèrement
                   vêtu, parfois armé ; debout sur son char, entraîné vers la gauche par un attelage

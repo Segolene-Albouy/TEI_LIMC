@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<!--
+COMMENTAIRE
+Excellent travail, modélisation fine du texte et choix d'encodage parcimonieux et bien justifiés
+L'ensemble répond bien aux exigences de l'édition et use des balises d'une manière adéquate
+Cependant certains des commentaires du document TEI aurait dû avoir leur place dans l'ODD
+si l'objectif est justement de constituer un modèle pour de l'édition collaborative
+Attention aux coquilles
+-->
+
 <!DOCTYPE TEI [
   <!ENTITY LIMC '<choice><expan xml:lang="la">Lexicon Iconographicon Mythologiae Classicae </expan><abbr xml:lang="la">LIMC</abbr></choice>' > <!-- Entité pour le LIMC -->
-  <!ENTITY KLY "<ref target ='cly'>Klytaimestra </ref>" >
+  <!ENTITY KLY "<ref target ='cly'>Klytaimestra</ref>" >
   <!ENTITY LAO "<ref target ='lao'>Laois</ref>" >
 ]>
 
@@ -14,7 +23,7 @@
       <fileDesc>
          <!-- titleStmt : informations sur la présente édition -->
          <titleStmt>
-            <title> Documentation de l'encodage du &LIMC; en TEI par Maxime GRIVEAU</title>
+            <title>Documentation de l'encodage du &LIMC; en TEI par Maxime GRIVEAU</title>
          </titleStmt>
          <editionStmt>
             <edition>L'édition sur laquelle est basé l'encodage est la première et unique édition
@@ -42,7 +51,7 @@
             <biblStruct>
 
                <analytic>
-                  <author><persName xml:lang="FR"> Morizot Yvette </persName></author>
+                  <author><persName xml:lang="FR">Morizot Yvette</persName></author>
                   <title><ref target="cly"/></title>
                   <author><persName xml:lang="FR">Odette Touchefeu-Meynier</persName></author>
                   <title><ref target="lao"/></title>
@@ -75,7 +84,7 @@
          <change when="2023-11-29" who="#encodeur">Création de l'encodage, début de remplissage du
             teiHeader</change>
 
-         <change when="2024-12-01" who="#encodeur">Création de l'ODD, défintiion des premières
+         <change when="2024-12-01" who="#encodeur">Création de l'ODD, définition des premières
             règles et structuration</change>
       </revisionDesc>
 
@@ -89,7 +98,7 @@
             <head>Projet éditorial et exploitations possibles</head>
 
             <p>L'objectif de notre encodage est de proposer un encodage-type de deux notices issues
-               du &LIMC; ainsi que de constraint l'utilisation des balises choisies afin, dans le
+               du &LIMC; ainsi que de contraindre l'utilisation des balises choisies afin, dans le
                futur, de prévoir un encodage de tous les volumes de l'encyclopédie (collaboratif ou
                automatisé). On a tâché de contraindre l'utilisation des balises le plus précisément
                possible afin, si le projet se concrétise, d'avoir un encodage le plus régulier et
@@ -99,8 +108,8 @@
                dans les 4 langues qui le composent (actuellement, chacune des notices est composée
                dans la langue de l'auteur ; ce qui rend difficile sa lecture). Ce sera aussi
                l'occasion de rendre cet impressionnant travail éditorial consultable gratuitement,
-               les volumes étant extrèmement onéreux pour les bibliothèques (plusieurs milliers
-               d'euros) ; il était difficile pour elles de se le procurer. </p>
+               les volumes étant extrêmement onéreux pour les bibliothèques (plusieurs milliers
+               d'euros) ; il était difficile pour elles de se le procurer.</p>
 
             <!-- Présenter en introduction votre projet éditorial et ses exploitations possibles -->
 
@@ -111,7 +120,7 @@
                   guidelines</ref> concernant les dictionnaires et encyclopédies et avons décidé
                   de structurer notre encodage en suivant le principe qu'une entrée de dictionnaire
                   correspondait à un personnage, nous avons ensuite structuré nos notices en
-                  diverses sous parties (sous notices avec la balise<gi corresp="re"> re</gi>)
+                  diverses sous-parties (sous notices avec la balise <gi corresp="re">re</gi>)
                   auxquelles nous avons attribué à chaque fois un attribut <att>type</att> qui est
                   contenu dans une liste contrainte (qui reprend la liste des parties de notices du
                   LIMC) grace à Schematron, pour les <gi corresp="re">re</gi> de premier niveau. Les
@@ -121,28 +130,29 @@
 
                <egXML xmlns="http://www.tei-c.org/ns/Examples">
                   <entry>
-                     <re type="genealogie"> CONTENU <re type="saisielibre">CONTENU</re>
+                     <re type="genealogie">
+                        CONTENU <re type="saisielibre">CONTENU</re>
                      </re>
                   </entry>
                </egXML>
                <p>Nous avons aussi contraint le contenu possible de l'attribut <att>role</att>de la
                   balise <gi corresp="persName">persName </gi>(que nous utilisons pour les
                   personnages mythologiques, <gi corresp="Name">Name</gi> étant réservé aux
-                  personnes réelles) en listant toutes les relations familliales possibles afin
+                  personnes réelles) en listant toutes les relations familiales possibles afin
                   d'avoir un encodage régulier et d'éviter des erreurs de saisie dans le cas d'un
-                  projet collaboratif ou automatisé </p>
+                  projet collaboratif ou automatisé.</p> <!--Bien-->
 
-               <p>Nous avons taché de déclarer des entités pour chacun des personnages dont nous
+               <p>Nous avons tâché de déclarer des entités pour chacun des personnages dont nous
                   avons créé une entrée, elles contiennent la balise <gi corresp="ref">ref</gi> avec
                   une <att>target</att> correctement identifiée, l'objectif est ici de n'avoir à
                   déclarer qu'une fois chaque personnage (au début de sa notice) et d'ensuite y
-                  faire référence grace à l'entité de façon rapide Grace à cela, chaque fois qu'une
-                  nouvelle notice sera crééé, on pourra utiliser l'entité pour gagner du temps.
+                  faire référence grâce à l'entité de façon rapide. Grâce à cela, chaque fois qu'une
+                  nouvelle notice sera créée, on pourra utiliser l'entité pour gagner du temps.
                   Notons au passage que nous avons décidé de donner un nommage régulier aux id de
                   nos personnages (3 premières lettres du nom grec) afin de faciliter les recherches
                   et les créations de nouvelles id.</p>
 
-               <p> Enfin, concernant les oeuvres d'art, nous avons utilisé les balises suivantes :
+               <p> Enfin, concernant les œuvres d'art, nous avons utilisé les balises suivantes :
                   <egXML xmlns="http://www.tei-c.org/ns/Examples">
                      <figure n="1">
                         <!-- numérotation continue de nos figures -->
@@ -159,15 +169,15 @@
 
                <p>Comme l'encodage le montre, nous avons été le plus avare possible dans la
                   diversité des balises et attributs utilisées, nous avons voulu faire en sorte que
-                  l'encodage soit le plus simple possible en vue d'une automatisation ou de la mise
+                  l'encodage soit le plus simple possible en vue d'une automatisation ou de la mise <!--Bien-->
                   en place d'un projet collaboratif. Par ailleurs, la structuration très régulière
-                  du LIMC ne justifiait aucunnement l'usage de nombreuses balises. Nous avons
-                  supprimé toutes les modules inutilisées dans notre ODD afin de contraintre le plus
+                  du LIMC ne justifiait aucunement l'usage de nombreuses balises. Nous avons
+                  supprimé toutes les modules inutilisées dans notre ODD afin de contraindre le plus
                   possible l'encodage futur. Notre ODD ne contient donc que les modules suivants :
-                  namesdates (<gi corresp="persName">PersName</gi> et <gi corresp="Name">Name</gi>
-                  notamment) ; dictionnaries (cf. plus haut); core (éléments de bases); figures
-                  (pour nos éléments graphiques); header (pour le TeiHeader); textstructure (pour la
-                  structure générale).</p>
+                  namesdates (<gi corresp="persName">persName</gi> et <gi corresp="Name">name</gi>
+                  notamment) ; dictionnaries (cf. plus haut) ; core (éléments de bases) ; figures
+                  (pour nos éléments graphiques) ; header (pour le <gi>teiHeader</gi>); textstructure
+                  (pour la structure générale).</p>
 
                <p>Ajoutons enfin que nous avons commenté notre encodage le plus possible</p>
 
@@ -192,12 +202,12 @@
                   </attList>
                </elementSpec>
                <elementSpec ident="persName" mode="change">
-                  <gloss xml:id="persname"> liste des personnages </gloss>
-                  <desc> Liste des personnages, cet élément contiendra obligatoirement un attribut
+                  <gloss xml:id="persname">Liste des personnages</gloss>
+                  <desc>Liste des personnages, cet élément contiendra obligatoirement un attribut
                      <att>role</att> dont la valeur est définie dans une liste fermée. Il pourra
                      aussi contenir une référence (via <att>xml:id</att> ou la <att>ref</att>
-                     correspondante) à un autre personnage. Si il est fait mention d'une personne
-                     réelle, l'élément <gi corresp="name">name</gi> sera préféré. </desc>
+                     correspondante) à un autre personnage. S'il est fait mention d'une personne
+                     réelle, l'élément <gi corresp="name">name</gi> sera préféré.</desc>
                   <attList>
                      <attDef ident="calendar" mode="delete"/>
                      <attDef ident="when" mode="delete"/>
@@ -275,11 +285,12 @@
                      <!-- Contrainte Schematron sur le contenu des premiers re -->
                      <constraint>
                         <s:rule context="tei:re[not(parent::tei:re)]">
-                           <s:assert
-                                   test="(@type = 'commentaire' or @type = 'bibliographie' or @type = 'catalogue' or @type = 'etymologie' or @type = 'genealogie' or @type='sources_littéraires')"
-                           >La valeur des éléments re de premier niveau doit être contenue dans
+                           <!--OK-->
+                           <s:assert test="(@type = 'commentaire' or @type = 'bibliographie' or @type = 'catalogue' or @type = 'etymologie' or @type = 'genealogie' or @type='sources_litteraires')">
+                              La valeur des éléments re de premier niveau doit être contenue dans
                               la liste définie : commentaire | bibliographie | catalogue | etymologie
-                              genealogie | sources_littéraires.</s:assert>
+                              genealogie | sources_litteraires.
+                           </s:assert>
                         </s:rule>
                      </constraint>
                   </constraintSpec>
@@ -312,8 +323,8 @@
                <elementSpec ident="name" mode="change">
                   <gloss xml:id="name">Liste des personnes réelles cités dans le LIMC</gloss>
                   <desc>Cet élément pourra contenir une référence (via xml:id ou la ref
-                     correspondante) à un autre personnage. Si il est fait mention d'un personnage
-                     mythologique, l'élément <gi corresp="persname"> persName </gi> sera
+                     correspondante) à un autre personnage. S'il est fait mention d'un personnage
+                     mythologique, l'élément <gi corresp="persname">persName</gi> sera
                      préféré.</desc>
                   <attList>
                      <attDef ident="calendar" mode="delete"/>
@@ -560,7 +571,7 @@
                   </attList>
                </elementSpec>
                <elementSpec ident="div" mode="change">
-                  <desc xml:lang="fr"> L'élément div est forcément suivi d'un élément head et un élément entry</desc>
+                  <desc xml:lang="fr">L'élément div est forcément suivi d'un élément head et un élément entry</desc>
                   <content>
                      <sequence maxOccurs="1">
                         <elementRef key="head"/>
